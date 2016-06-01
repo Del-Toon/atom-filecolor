@@ -17,8 +17,9 @@
 @k : #359255;
 @l : #A8A8A8;
 
-@html: @a;
-@css: @i;
+@html: #F16529;
+@css: #28AAE1;
+@less: #1D365D;
 @php: #5272AB;
 @js: #F8DA4A;
 @json: #7f7f7f;
@@ -48,21 +49,38 @@
 
 .file-colors {
 
-  .name.icon[data-name$="bower.json"],
-  .title[data-name$="bower.json"] {
-    color: saturate(@bower, 20%);
+  .name.icon, .title{
+    color: @txt;
 
     .tab.active & {
-      color: saturate(@bower, 100%);
+      color: @txt;
+    }
+  }
+
+  .name.icon[data-name$=".js"],
+  .title[data-name$=".js"] {
+    color: @js;
+
+    .tab.active & {
+      color: @js;
+    }
+  }
+
+  .name.icon[data-name$="bower.json"],
+  .title[data-name$="bower.json"] {
+    color: @bower;
+
+    .tab.active & {
+      color: @bower;
     }
   }
 
   .name.icon[data-name$=".coffee"],
   .title[data-name$=".coffee"] {
-    color: saturate(@coffee, 20%);
+    color: @coffee;
 
     .tab.active & {
-      color: saturate(@coffee, 100%);
+      color: @coffee;
     }
   }
 
@@ -70,73 +88,55 @@
   .title[data-name$=".css"] ,
   .name.icon[data-name$=".less"],
   .title[data-name$=".less"] {
-    color: saturate(@css, 20%);
+    color: @css;
 
     .tab.active & {
-      color: saturate(@css, 100%);
+      color: @css;
     }
   }
 
   .name.icon[data-name$=".ejs"],
   .title[data-name$=".ejs"] {
-    color: saturate(@ejs, 20%);
+    color: @ejs;
 
     .tab.active & {
-      color: saturate(@ejs, 100%);
+      color: @ejs;
     }
   }
 
   .name.icon[data-name$="favicon.ico"],
   .title[data-name$="favicon.ico"] {
-    color: saturate(@favicon, 20%);
+    color: @favicon;
 
     .tab.active & {
-      color: saturate(@favicon, 100%);
+      color: @favicon;
     }
   }
 
   .name.icon[data-name="Gruntfile.js"],
   .title[data-name="Gruntfile.js"] {
-    color: saturate(@grunt, 20%);
+    color: @grunt;
 
     .tab.active & {
-      color: saturate(@grunt, 100%);
-    }
-  }
-
-  .name.icon[data-name*="gulp"],
-  .title[data-name*="gulp"] {
-    color: saturate(@gulp, 20%);
-
-    .tab.active & {
-      color: saturate(@gulp, 100%);
+      color: @grunt;
     }
   }
 
   .name.icon[data-name$=".hbs"],
   .title[data-name$=".hbs"] {
-    color: saturate(@hbs, 20%);
+    color: @hbs;
 
     .tab.active & {
-      color: saturate(@hbs, 100%);
+      color: @hbs;
     }
   }
 
   .name.icon[data-name$=".html"],
   .title[data-name$=".html"] {
-    color: saturate(@html, 20%);
+    color: @html;
 
     .tab.active & {
-      color: saturate(@html, 100%);
-    }
-  }
-
-  .name.icon[data-name$=".js"],
-  .title[data-name$=".js"] {
-    color: saturate(@js, 20%);
-
-    .tab.active & {
-      color: saturate(@js, 100%);
+      color: @html;
     }
   }
 
@@ -144,100 +144,91 @@
   .title[data-name$=".cson"],
   .name.icon[data-name$=".json"],
   .title[data-name$=".json"] {
-    color: saturate(@json, 20%);
+    color: @json;
 
     .tab.active & {
-      color: saturate(@json, 100%);
+      color: @json;
     }
   }
 
   .name.icon[data-name$=".jsx"],
   .title[data-name$=".jsx"] {
-    color: saturate(@jsx, 20%);
+    color: @jsx;
 
     .tab.active & {
-      color: saturate(@jsx, 100%);
+      color: @jsx;
     }
   }
 
   .name.icon[data-name="LICENSE"],
   .title[data-name="LICENSE"] {
-    color: saturate(@license, 20%);
+    color: @license;
 
     .tab.active & {
-      color: saturate(@license, 100%);
+      color: @license;
     }
   }
 
   .name.icon[data-name$=".md"],
   .title[data-name$=".md"] {
-    color: saturate(@md, 20%);
+    color: @md;
 
     .tab.active & {
-      color: saturate(@md, 100%);
+      color: @md;
     }
   }
 
   .name.icon[data-name$=".mustache"],
   .title[data-name$=".mustache"] {
-    color: saturate(@mustache, 20%);
+    color: @mustache;
 
     .tab.active & {
-      color: saturate(@mustache, 100%);
+      color: @mustache;
     }
   }
 
   .name.icon[data-name$=".php"],
   .title[data-name$=".php"] {
-    color: saturate(@php, 20%);
+    color: @php;
 
     .tab.active & {
-      color: saturate(@php, 100%);
+      color: @php;
     }
   }
 
   .name.icon[data-name$=".py"],
   .title[data-name$=".py"] {
-    color: saturate(@py, 20%);
+    color: @py;
 
     .tab.active & {
-      color: saturate(@py, 100%);
+      color: @py;
     }
   }
 
   .name.icon[data-name$=".rb"],
   .title[data-name$=".rb"] {
-    color: saturate(@rb, 20%);
+    color: @rb;
 
     .tab.active & {
-      color: saturate(@rb, 100%);
+      color: @rb;
     }
   }
 
   .name.icon[data-name$=".scss"],
   .title[data-name$=".scss"] {
-    color: saturate(@scss, 20%);
+    color: @scss;
 
     .tab.active & {
-      color: saturate(@scss, 100%);
-    }
-  }
-
-  .name.icon[data-name$=".txt"],
-  .title[data-name$=".txt"] {
-    color: saturate(@txt, 20%);
-
-    .tab.active & {
-      color: saturate(@txt, 100%);
+      color: @scss;
     }
   }
 
   .name.icon[data-name$=".xml"],
   .title[data-name$=".xml"] {
-    color: saturate(@xml, 20%);
+    color: @xml;
 
     .tab.active & {
-      color: saturate(@xml, 100%);
+      color: @xml;
     }
   }
 
@@ -250,10 +241,28 @@
   .title[data-name$=".eslintignore"],
   .name.icon[data-name$=".jshintrc"],
   .title[data-name$=".jshintrc"] {
-    color: saturate(@gitignore, 20%);
+    color: @gitignore;
 
     .tab.active & {
-      color: saturate(@gitignore, 100%);
+      color: @gitignore;
+    }
+  }
+
+  .name.icon[data-name*="gulpfile.js"],
+  .title[data-name*="gulpfile.js"] {
+    color: @gulp;
+
+    .tab.active & {
+      color: @gulp;
+    }
+  }
+
+  .name.icon:focus,
+  .title:focus {
+    color: #FFF;
+
+    .tab.active:focus & {
+      color: #FFF;
     }
   }
 
