@@ -6,16 +6,16 @@
 
 @a : #ff0021;
 @b : #a7b20d;
-@c : #ffac13;
-@d : #5f9886;
+@c : #ffac13; //
+@d : #5f9886; //
 @e : #e36789;
 @f : #e60010;
 @g : #868804;
-@h : #e48209;
+@h : #e48209; //
 @i : #007676;
 @j : #ba4173;
-@k : #359255;
-@l : #A8A8A8;
+@k : #359255; //
+@l : #A8A8A8; //
 
 @html: #F16529;
 @css: #28AAE1;
@@ -28,7 +28,12 @@
 @txt: #CCC;
 @xml: #F57900;
 @favicon: @k;
+@font: white;
+@img: @h;
 @license: @l;
+@git: #F03C2E;
+@gitignore: rgba(240,60,46,.5);
+@ignore: rgba(0,0,0,.5);
 
 @grunt: #FBA919;
 @bower: #EF5734;
@@ -43,10 +48,6 @@
 @rb: #b62636;
 
 
-
-@gitignore: #3f535b;
-
-
 .file-colors {
 
   .name.icon, .title{
@@ -57,21 +58,12 @@
     }
   }
 
-  .name.icon[data-name$=".js"],
-  .title[data-name$=".js"] {
+  .name.icon[data-name$="js"],
+  .title[data-name$="js"] {
     color: @js;
 
     .tab.active & {
       color: @js;
-    }
-  }
-
-  .name.icon[data-name$="bower.json"],
-  .title[data-name$="bower.json"] {
-    color: @bower;
-
-    .tab.active & {
-      color: @bower;
     }
   }
 
@@ -84,14 +76,23 @@
     }
   }
 
-  .name.icon[data-name$=".css"],
-  .title[data-name$=".css"] ,
+  .name.icon[data-name$="css"],
+  .title[data-name$="css"] ,
   .name.icon[data-name$=".less"],
   .title[data-name$=".less"] {
     color: @css;
 
-    .tab.active & {
+    .tab.active &{
       color: @css;
+    }
+  }
+
+  .name.icon[data-name$="main.less"],
+  .title[data-name$="main.less"] {
+    color: @gulp;
+
+    .tab.active &{
+      color: @gulp;
     }
   }
 
@@ -101,6 +102,25 @@
 
     .tab.active & {
       color: @ejs;
+    }
+  }
+
+  .name.icon[data-name$=".woff"],
+  .title[data-name$=".woff"],
+  .name.icon[data-name$=".woff2"],
+  .title[data-name$=".woff2"],
+  .name.icon[data-name$=".otf"],
+  .title[data-name$=".otf"],
+  .name.icon[data-name$=".ttf"],
+  .title[data-name$=".ttf"],
+  .name.icon[data-name$="fonts"],
+  .title[data-name$="fonts"],
+  .name.icon[data-name$="font"],
+  .title[data-name$="font"] {
+    color: @font;
+
+    .tab.active & {
+      color: @font;
     }
   }
 
@@ -140,6 +160,24 @@
     }
   }
 
+  .name.icon[data-name$="dist"],
+  .title[data-name$="dist"] {
+    color: @d;
+
+    .tab.active & {
+      color: @d;
+    }
+  }
+
+  .name.icon[data-name$="dev"],
+  .title[data-name$="dev"] {
+    color: @c;
+
+    .tab.active & {
+      color: @c;
+    }
+  }
+
   .name.icon[data-name$=".cson"],
   .title[data-name$=".cson"],
   .name.icon[data-name$=".json"],
@@ -148,6 +186,15 @@
 
     .tab.active & {
       color: @json;
+    }
+  }
+
+  .name.icon[data-name$="bower.json"],
+  .title[data-name$="bower.json"] {
+    color: @bower;
+
+    .tab.active & {
+      color: @bower;
     }
   }
 
@@ -187,6 +234,10 @@
     }
   }
 
+  .name.icon[data-name$="templates"],
+  .title[data-name$="templates"],
+  .name.icon[data-name$="inc"],
+  .title[data-name$="inc"],
   .name.icon[data-name$=".php"],
   .title[data-name$=".php"] {
     color: @php;
@@ -232,6 +283,32 @@
     }
   }
 
+  .name.icon[data-name$=".git"],
+  .title[data-name$=".git"] {
+    color: @git;
+
+    .tab.active & {
+      color: @git;
+    }
+  }
+
+  .name.icon[data-name$=".jpg"],
+  .title[data-name$=".jpg"],
+  .name.icon[data-name$=".png"],
+  .title[data-name$=".png"],
+  .name.icon[data-name$=".gif"],
+  .title[data-name$=".gif"],
+  .name.icon[data-name$="images"],
+  .title[data-name$="images"],
+  .name.icon[data-name$="img"],
+  .title[data-name$="img"] {
+    color: @img;
+
+    .tab.active & {
+      color: @img;
+    }
+  }
+
 
   .name.icon[data-name$=".gitignore"],
   .title[data-name$=".gitignore"],
@@ -257,13 +334,28 @@
     }
   }
 
-  .name.icon:focus,
-  .title:focus {
-    color: #FFF;
+  .name.icon[data-name^="._"],
+  .title.icon[data-name^="._"],
+  .name.icon[data-name$=".DS_Store"],
+  .title[data-name$=".DS_Store"] {
+    color: @ignore;
 
-    .tab.active:focus & {
-      color: #FFF;
+    .tab.active & {
+      color: @ignore;
     }
+  }
+
+}
+
+.tab-bar .tab:before{
+  color: inherit;
+}
+
+atom-panel-container{
+
+  .tree-view:focus li:not(.list-nested-item).selected::before,
+  .tree-view:focus li.list-nested-item > .list-item.selected:before{
+    background: rgba(249, 245, 215, 0.05);
   }
 
 }
