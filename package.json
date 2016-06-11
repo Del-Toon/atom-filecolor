@@ -1,14 +1,43 @@
 {
-  "name": "filecolor",
-  "author": "Paul Nikolas Phoa",
+  "name": "filecolor alternative",
+  "author": {
+    "name": "AntoineD"
+  },
   "main": "./lib/filecolor",
   "version": "0.3.2",
   "description": "Add color to filename",
   "keywords": [],
-  "repository": "https://github.com/nikolas6/atom-filecolor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Del-Toon/atom-filecolor.git"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "readme": "# filecolor package\n\nAdd color to filename.\n\n![A screenshot of your package](https://raw.githubusercontent.com/Del-Toon/atom-filecolor/master/screenshot.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/Del-Toon/atom-filecolor/issues"
+  },
+  "homepage": "https://github.com/Del-Toon/atom-filecolor#readme",
+  "_id": "filecolor@0.3.2",
+  "_shasum": "27bb73a349188cc08626ab4a0aadcfe0adb7bf2f",
+  "_resolved": "file:../d-116411-54430-r6g352/package.tgz",
+  "_from": "../d-116411-54430-r6g352/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/filecolor-view.coffee",
+        "lib/filecolor.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }
