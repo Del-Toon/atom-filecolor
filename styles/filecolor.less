@@ -5,7 +5,7 @@
 @import "ui-variables";
 
 @a : #ff0021;
-@b : #a7b20d;
+@b : #a7b20d; //
 @c : #ffac13; //
 @d : #5f9886; //
 @e : #e36789;
@@ -24,7 +24,7 @@
 @js: #F8DA4A;
 @json: #7f7f7f;
 @gulp: #CF4646;
-@md: #4D4946;
+@md: @b;
 @txt: #CCC;
 @xml: #F57900;
 @favicon: @k;
@@ -87,6 +87,12 @@
     }
   }
 
+  .name.icon[data-name$="init.less"],
+  .title[data-name$="init.less"],
+  .name.icon[data-name$="var.less"],
+  .title[data-name$="var.less"],
+  .name.icon[data-name$="theme.less"],
+  .title[data-name$="theme.less"],
   .name.icon[data-name$="main.less"],
   .title[data-name$="main.less"] {
     color: @gulp;
@@ -336,9 +342,12 @@
 
   .name.icon[data-name^="._"],
   .title.icon[data-name^="._"],
+  .name.icon[data-name^=".keep"],
+  .title.icon[data-name^=".keep"],
   .name.icon[data-name$=".DS_Store"],
   .title[data-name$=".DS_Store"] {
     color: @ignore;
+    display: none;
 
     .tab.active & {
       color: @ignore;
@@ -349,13 +358,4 @@
 
 .tab-bar .tab:before{
   color: inherit;
-}
-
-atom-panel-container{
-
-  .tree-view:focus li:not(.list-nested-item).selected::before,
-  .tree-view:focus li.list-nested-item > .list-item.selected:before{
-    background: rgba(249, 245, 215, 0.05);
-  }
-
 }
